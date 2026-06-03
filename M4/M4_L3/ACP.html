@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Print current date
+let currentDate = new Date();
+console.log("Current Date:", currentDate);
+
+// Print 5 random numbers using a loop
+console.log("Random Numbers:");
+for (let i = 1; i <= 5; i++) {
+    let randomNum = Math.random(); // Generates a number between 0 and 1
+    console.log(randomNum);
+}
+
+// Generate and print a rounded random number between 0 and 100
+let randomNumber = Math.random() * 100;
+let roundedNumber = Math.round(randomNumber);
+
+console.log("Rounded Random Number:", roundedNumber);
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Digital Zoo Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f9f4;
+            text-align: center;
+        }
+
+        h1 {
+            color: darkgreen;
+        }
+
+        #zoo {
+            width: 70%;
+            margin: auto;
+            padding: 20px;
+            border: 3px solid green;
+            background-color: white;
+        }
+
+        .animal {
+            margin: 10px;
+            padding: 15px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: lightyellow;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🐾 My Digital Zoo Manager 🐾</h1>
+
+    <div id="zoo">
+        <div class="animal" id="lion">🦁 Lion Zone</div>
+        <div class="animal" id="elephant">🐘 Elephant Zone</div>
+        <div class="animal" id="monkey">🐵 Monkey Zone</div>
+    </div>
+
+    <button onclick="exploreZoo()">Explore Zoo</button>
+
+    <script>
+
+        function exploreZoo() {
+
+            let zoo = document.getElementById("zoo");
+
+            // Parent Node
+            console.log("Parent of Zoo:", zoo.parentNode);
+
+            // Child Nodes
+            console.log("Children of Zoo:", zoo.children);
+
+            // First and Last Child
+            console.log("First Child:", zoo.firstElementChild.innerText);
+            console.log("Last Child:", zoo.lastElementChild.innerText);
+
+            // Sibling Nodes
+            let elephant = document.getElementById("elephant");
+
+            console.log(
+                "Previous Sibling:",
+                elephant.previousElementSibling.innerText
+            );
+
+            console.log(
+                "Next Sibling:",
+                elephant.nextElementSibling.innerText
+            );
+
+            // Node Type
+            console.log("Zoo Node Type:", zoo.nodeType);
+
+            // Update Content
+            document.getElementById("lion").innerHTML =
+                "🦁 Lion Zone - King of the Jungle";
+
+            // Update Style
+            document.getElementById("monkey").style.backgroundColor =
+                "lightgreen";
+
+            alert("Zoo explored successfully! Check the console.");
+        }
+
+    </script>
+
+</body>
+</html>
